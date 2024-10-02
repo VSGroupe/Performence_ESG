@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Details_bouton/Indexe_de_Reporting_bouton.dart';
+import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Details_bouton/Index_de_Reporting_bouton.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Details_bouton/Methodologie_De_Reporting_bouton.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Details_bouton/Publication_bouton.dart';
 

@@ -192,8 +192,9 @@ class _BaniereState extends State<Baniere> {
         children: [
           Image.asset(
             "assets/images/bandeSifca.jpg",
+            // "assets/images/logoESG.png",
             width: widget.long ?? 1500,
-            height: widget.larg ?? 250,
+            height: widget.larg ?? 200,
             fit: BoxFit.fill,
           ),
           const SizedBox(

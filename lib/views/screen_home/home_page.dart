@@ -5,10 +5,13 @@ import 'package:marquee_text/marquee_text.dart';
 import 'package:performence_esg/views/constent/AppColor.dart';
 import 'package:performence_esg/views/screen_home/widgets/coposant/form.dart';
 import 'package:performence_esg/views/screen_home/widgets/widget_screen_home/InfoBar.dart';
+
 import 'package:performence_esg/views/screen_home/widgets/widget_screen_home/header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  get long => null;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -32,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("images/shop2.jpg"),
+                image: const AssetImage("images/shop2.jpg"),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                     Colors.black.withOpacity(0.3), BlendMode.darken),
@@ -42,35 +45,29 @@ class _HomeScreenState extends State<HomeScreen> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Center(
+                      Center(
                         child: SizedBox(
                           width: 450,
                           height: 30,
                           child: MarqueeText(
                             text: TextSpan(
-                                text: "Bienvenue dans ",
-                                style: TextStyle(
-                                    fontSize: 27,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text: "Performence ",
-                                      style: TextStyle(color: Colors.white)),
-                                  TextSpan(
-                                      text: "ESG",
-                                      style: TextStyle(color: Colors.white)),
-                                ]),
+                              text:
+                                  "Piloter et editer vos données de Performence ESG avec simplicité",
+                              style: TextStyle(
+                                  fontSize: 27,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
                             textDirection: TextDirection.ltr,
                             marqueeDirection: MarqueeDirection.rtl,
                             alwaysScroll: true,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 24,
                               color: Colors.black,
                             ),
@@ -78,52 +75,19 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      RichText(
-                        text: const TextSpan(
-                            text: "Piloter ",
-                            style: TextStyle(
-                                fontSize: 23,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: "et editer ",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 23,
-                                  )),
-                              TextSpan(
-                                  text: "vos données de ",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 23,
-                                  )),
-                              TextSpan(
-                                  text: "Performence ",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 23,
-                                  )),
-                              TextSpan(
-                                text: "ESG ",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 23),
-                              ),
-                              TextSpan(
-                                  text: "avec simplicité ",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 23,
-                                  )),
-                            ]),
-                      ),
                     ],
                   ),
                   const SizedBox(
                     height: 30,
+                  ),
+                  Image.asset(
+                    "assets/images/logoESG.png",
+                    width: widget.long ?? 400,
+                    height: widget.long ?? 100,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    height: 20,
                   ),
                   const Baniere(),
                   SingleChildScrollView(
@@ -182,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

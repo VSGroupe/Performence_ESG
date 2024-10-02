@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/cardreEnvironnement.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ligne2.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/Login%20Reporting%20Edit/bouton_login_reporting.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/Text_actualit%C3%A91.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/actualit%C3%A9_element.dart';
@@ -13,7 +15,10 @@ import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart'
 import 'package:performence_esg/views/Reporting_Digital/widgets/slide.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/text_actualit%C3%A92.dart';
 import 'package:performence_esg/views/screen_home/widgets/widget_screen_home/InfoBar.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/INFORMATIONS%20GENERALES/cardInforation.dart';
 import 'package:performence_esg/views/screen_home/widgets/widget_screen_home/header.dart';
+
+import 'Alignements Strategie/ligne1.dart';
 
 class HomeReportingPage extends StatefulWidget {
   const HomeReportingPage({Key? key}) : super(key: key);
@@ -109,31 +114,31 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Center(
-                          child: SizedBox(
-                            width: 450,
-                            height: 30,
-                            child: MarqueeText(
-                              text: TextSpan(
-                                text: "Cultivons notre croissance",
-                                style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.red),
-                              ),
-                              textDirection: TextDirection.ltr,
-                              marqueeDirection: MarqueeDirection.rtl,
-                              alwaysScroll: true,
-                              style: TextStyle(
-                                fontSize: 24,
-                                color: Colors.black,
-                              ),
-                              speed: 18,
-                            ),
-                          ),
-                        ),
+                        // Center(
+                        //   child: SizedBox(
+                        //     width: 450,
+                        //     height: 30,
+                        //     // child: MarqueeText(
+                        //     //   text: TextSpan(
+                        //     //     text: "Cultivons notre croissance",
+                        //     //     style: TextStyle(
+                        //     //         fontSize: 25,
+                        //     //         fontWeight: FontWeight.bold,
+                        //     //         color: Colors.red),
+                        //     //   ),
+                        //     //   textDirection: TextDirection.ltr,
+                        //     //   marqueeDirection: MarqueeDirection.rtl,
+                        //     //   alwaysScroll: true,
+                        //     //   style: TextStyle(
+                        //     //     fontSize: 24,
+                        //     //     color: Colors.black,
+                        //     //   ),
+                        //     //   speed: 18,
+                        //     // ),
+                        //   ),
+                        // ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         SearchBarre(),
                       ],
@@ -141,10 +146,10 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const BoutonGroupe(),
-                    const SizedBox(
-                      height: 20,
-                    ),
+                    // const BoutonGroupe(),
+                    // const SizedBox(
+                    //   height: 20,
+                    // ),
                     const Baniere(),
                     const SizedBox(
                       height: 10,
@@ -154,13 +159,19 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
                     //   height: 10,
                     // ),
 
-                    const ActuliteElement(),
-                    const SizedBox(height: 20),
-                    // const TexteActualite(),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const ActualiteElement2(),
+                    // const ActuliteElement(),
+                    // const SizedBox(height: 20),
+                    // // const TexteActualite(),
+                    // const SizedBox(
+                    //   height: 20,
+                    // ),
+                    // const ActualiteElement2(),
+
+                    Ligne1New(),
+                    const SizedBox(height: 10),
+                    CadreEnvironnemntNew(),
+                    const SizedBox(height: 10),
+                    Ligne2New(),
                     const SizedBox(height: 40),
                     ElementCroisement(),
                   ],

@@ -56,7 +56,7 @@ class _IndexDeReportingBoutonState extends State<IndexDeReportingBouton> {
                       onTap: () {},
                     ),
                     PopupMenuItem(
-                      child: Text("GSPNR"),
+                      child: Text("GPSNR"),
                       onTap: () {},
                     ),
                     PopupMenuItem(

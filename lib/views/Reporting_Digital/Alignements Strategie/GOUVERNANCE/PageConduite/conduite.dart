@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PublicationBouton extends StatefulWidget {
+class ConduitenewButton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _ConduitenewButtonState createState() => _ConduitenewButtonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _ConduitenewButtonState extends State<ConduitenewButton> {
   bool _isHovered = false;
 
   @override
@@ -48,7 +48,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulication ',
+              "        Conduite des affaires...      ",
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PublicationBouton extends StatefulWidget {
+class PerimtrenewButton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _PerimtrenewButtonState createState() => _PerimtrenewButtonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _PerimtrenewButtonState extends State<PerimtrenewButton> {
   bool _isHovered = false;
 
   @override
@@ -48,7 +48,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulication ',
+              'Périmètre , cycle de reporting...',
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,
