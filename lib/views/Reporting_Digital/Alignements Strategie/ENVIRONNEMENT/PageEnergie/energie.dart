@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
 class EnergienewButton extends StatefulWidget {
   @override
@@ -33,7 +35,10 @@ class _EnergienewButtonState extends State<EnergienewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go(
+                "/Accueil_Reporting/Environnement/Energie_(Consommation_et_type_carburant_flote_automobile_carbone_neutre_transition_energetique_energies_renouvelable)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -41,7 +46,7 @@ class _EnergienewButtonState extends State<EnergienewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -54,10 +59,10 @@ class _EnergienewButtonState extends State<EnergienewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "                    Energie...                   ",
+              "                    Energie                      ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),

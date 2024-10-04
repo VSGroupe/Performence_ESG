@@ -45,7 +45,7 @@ class _ConformitenewButtonState extends State<ConformitenewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -58,10 +58,10 @@ class _ConformitenewButtonState extends State<ConformitenewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "   Conformité et vérification...   ",
+              "                Vérification              ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),

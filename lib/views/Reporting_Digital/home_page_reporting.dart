@@ -101,7 +101,7 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
                   image: const AssetImage("images/fond_accueil.jpg"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.3), BlendMode.darken),
+                      Colors.black.withOpacity(0.2), BlendMode.darken),
                 ),
               ),
               child: SingleChildScrollView(
@@ -172,8 +172,8 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
                     CadreEnvironnemntNew(),
                     const SizedBox(height: 10),
                     Ligne2New(),
-                    const SizedBox(height: 40),
-                    ElementCroisement(),
+                    // const SizedBox(height: 40),
+                    // ElementCroisement(),
                   ],
                 ),
               ),

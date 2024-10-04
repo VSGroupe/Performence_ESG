@@ -8,6 +8,11 @@ import '../INFORMATIONS GENERALES/PagePrincipeGeneraux/principeGenereaux.dart';
 import 'PageRessourcesEconomie/ressourceEconomique.dart';
 
 class CadreEnvironnemntNew extends StatelessWidget {
+  final Color cadreColor;
+
+  CadreEnvironnemntNew(
+      {this.cadreColor = const Color.fromARGB(255, 92, 167, 69)});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +20,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
       children: [
         Stack(
           children: [
-            // Contenu du cadre
+            // Cadre principal
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -23,11 +28,10 @@ class CadreEnvironnemntNew extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black
-                        .withOpacity(0.5), // Couleur de l'ombre noire
+                    color: Colors.black.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: const Offset(0, 2), // Décalage de l'ombre
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
@@ -43,66 +47,71 @@ class CadreEnvironnemntNew extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: [
-                      Column(
-                        children: [
-                          ClimatnewButton(),
-                          const SizedBox(height: 10),
-                          PollutionnewButton(),
-                          const SizedBox(height: 10),
-                          RessourceEauxnewButton(),
-                        ],
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        children: [
-                          BiodiversitenewButton(),
-                          const SizedBox(height: 10),
-                          RessourceEconomienewButton(),
-                          const SizedBox(height: 10),
-                          EnergienewButton(),
-                        ],
-                      ),
-                    ],
+
+                  // Cadre autour des mini-boutons
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: cadreColor.withOpacity(0.7),
+                      border: Border.all(color: cadreColor, width: 1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Wrap(
+                      spacing: 10,
+                      runSpacing: 10,
+                      children: [
+                        Column(
+                          children: [
+                            ClimatnewButton(),
+                            const SizedBox(height: 10),
+                            PollutionnewButton(),
+                            const SizedBox(height: 10),
+                            RessourceEauxnewButton(),
+                          ],
+                        ),
+                        const SizedBox(width: 20),
+                        Column(
+                          children: [
+                            BiodiversitenewButton(),
+                            const SizedBox(height: 10),
+                            RessourceEconomienewButton(),
+                            const SizedBox(height: 10),
+                            EnergienewButton(),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
 
-            // Premier conteneur rouge
+            // Bordures décoratives
             Positioned(
-              top: 0, // Aligner en haut du cadre
-              left: 8, // Aligner à gauche du cadre
+              top: 0,
+              left: 8,
               child: Container(
-                width: 200, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color:
-                    Color.fromARGB(255, 92, 167, 69), // Couleur de la bordure
+                width: 200,
+                height: 3,
+                color: cadreColor,
               ),
             ),
-
-            // Deuxième conteneur rouge
             Positioned(
               top: 5,
               left: 4,
               child: Container(
                 width: 199,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
-
-            // Troisième conteneur rouge
             Positioned(
               top: 10,
               left: 0,
               child: Container(
                 width: 198,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -111,7 +120,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 194,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -120,7 +129,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 190,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -129,7 +138,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 186,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -138,7 +147,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 182,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -147,7 +156,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 178,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -156,7 +165,7 @@ class CadreEnvironnemntNew extends StatelessWidget {
               child: Container(
                 width: 174,
                 height: 3,
-                color: const Color.fromARGB(255, 92, 167, 69),
+                color: cadreColor,
               ),
             ),
           ],

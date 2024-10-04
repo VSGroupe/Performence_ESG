@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
 class BiodiversitenewButton extends StatefulWidget {
   @override
@@ -33,7 +35,9 @@ class _BiodiversitenewButtonState extends State<BiodiversitenewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go("/Accueil_Reporting/Environnement/Biodiversite_(E4)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -41,7 +45,7 @@ class _BiodiversitenewButtonState extends State<BiodiversitenewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -54,10 +58,10 @@ class _BiodiversitenewButtonState extends State<BiodiversitenewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "              Biodiversité(E4)             ",
+              "              Biodiversité (E4)            ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),

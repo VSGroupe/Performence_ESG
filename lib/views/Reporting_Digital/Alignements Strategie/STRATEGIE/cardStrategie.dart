@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/STRATEGIE/PageEnjeux/enjeux.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/STRATEGIE/PageImpact/impact.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/STRATEGIE/PageMaterialit%C3%A9/materialite.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/STRATEGIE/PageRoad/road.dart';
 
 class CadreStrategieNew extends StatelessWidget {
+  final Color cadreColor;
+
+  CadreStrategieNew(
+      {this.cadreColor = const Color.fromARGB(255, 245, 139, 139)});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Utilisation d'un Stack pour superposer la bordure et le contenu
         Stack(
           children: [
-            // Contenu du cadre
+            // Cadre principal
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
@@ -22,11 +25,10 @@ class CadreStrategieNew extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black
-                        .withOpacity(0.5), // Couleur de l'ombre noire
+                    color: Colors.black.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: const Offset(0, 2), // Décalage de l'ombre
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
@@ -42,125 +44,123 @@ class CadreStrategieNew extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: [
-                      Column(
-                        children: [
-                          ImpactnewButton(),
-                          const SizedBox(height: 10),
-                          MaterialitenewButton(),
-                          const SizedBox(height: 40),
-                        ],
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        children: [
-                          EnjeuxmaterielnewButton(),
-                          const SizedBox(height: 10),
-                          RoadmappnewButton(),
-                        ],
-                      ),
-                    ],
+
+                  // Cadre autour des mini-boutons
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: cadreColor.withOpacity(1),
+                      border: Border.all(color: cadreColor, width: 1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Wrap(
+                      spacing: 10,
+                      runSpacing: 10,
+                      children: [
+                        Column(
+                          children: [
+                            ImpactnewButton(),
+                            const SizedBox(height: 10),
+                            MaterialitenewButton(),
+                            const SizedBox(height: 40),
+                          ],
+                        ),
+                        const SizedBox(width: 20),
+                        Column(
+                          children: [
+                            EnjeuxmaterielnewButton(),
+                            const SizedBox(height: 10),
+                            RoadmappnewButton(),
+                            const SizedBox(height: 75),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
 
-            // Premier conteneur rouge
+            // Bordures décoratives
             Positioned(
-              top: 0, // Aligner en haut du cadre
-              left: 8, // Aligner à gauche du cadre
+              top: 0,
+              left: 8,
               child: Container(
-                width: 200, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
-              ),
-            ),
-
-            // Deuxième conteneur rouge, légèrement en dessous du premier
-            Positioned(
-              top: 5, // Aligner un peu plus bas que le premier conteneur
-              left: 4, // Aligner à gauche du cadre
-              child: Container(
-                width: 199, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
-              ),
-            ),
-
-            // Troisième conteneur rouge, encore plus bas
-            Positioned(
-              top: 10, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
-              child: Container(
-                width: 198, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 150,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 15, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 5,
+              left: 4,
               child: Container(
-                width: 194, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 149,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 20, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 10,
+              left: 0,
               child: Container(
-                width: 190, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 148,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 25, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 15,
+              left: 0,
               child: Container(
-                width: 186, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 144,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 30, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 20,
+              left: 0,
               child: Container(
-                width: 182, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 140,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 35, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 25,
+              left: 0,
               child: Container(
-                width: 178, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 136,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 40, // Aligner encore plus bas que le deuxième conteneur
-              left: 0, // Aligner à gauche du cadre
+              top: 30,
+              left: 0,
               child: Container(
-                width: 174, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color: const Color.fromARGB(
-                    255, 245, 139, 139), // Couleur de la bordure
+                width: 132,
+                height: 3,
+                color: cadreColor,
+              ),
+            ),
+            Positioned(
+              top: 35,
+              left: 0,
+              child: Container(
+                width: 128,
+                height: 3,
+                color: cadreColor,
+              ),
+            ),
+            Positioned(
+              top: 40,
+              left: 0,
+              child: Container(
+                width: 124,
+                height: 3,
+                color: cadreColor,
               ),
             ),
           ],

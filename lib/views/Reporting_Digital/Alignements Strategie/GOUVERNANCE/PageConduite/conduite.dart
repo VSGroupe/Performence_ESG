@@ -45,7 +45,7 @@ class _ConduitenewButtonState extends State<ConduitenewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -58,10 +58,10 @@ class _ConduitenewButtonState extends State<ConduitenewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "        Conduite des affaires...      ",
+              "        Conduite des affaires        ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),

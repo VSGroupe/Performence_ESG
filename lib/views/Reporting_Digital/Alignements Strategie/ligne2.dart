@@ -17,7 +17,7 @@ class _Ligne2NewState extends State<Ligne2New> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 180),
+        SizedBox(width: 150),
         CadreStrategieNew(),
         SizedBox(width: 50),
         CadreSocialNew(),

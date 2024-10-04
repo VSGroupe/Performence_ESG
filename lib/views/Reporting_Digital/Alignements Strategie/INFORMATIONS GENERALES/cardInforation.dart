@@ -6,12 +6,16 @@ import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/INFORMATIONS%20GENERALES/pageContexte/contextNew.dart';
 
 class CadreInfotmationNew extends StatelessWidget {
+  final Color cadreColor;
+
+  CadreInfotmationNew(
+      {this.cadreColor = const Color.fromARGB(255, 49, 97, 230)});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Utilisation d'un Stack pour ajouter les bordures rouges et superposer la bordure et le contenu
         Stack(
           children: [
             // Cadre principal
@@ -22,17 +26,15 @@ class CadreInfotmationNew extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black
-                        .withOpacity(0.5), // Couleur de l'ombre noire
+                    color: Colors.black.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: const Offset(0, 2), // Décalage de l'ombre
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
               child: Column(
                 children: [
-                  // Titre dans le cadre
                   const Text(
                     "INFORMATIONS GENERALES",
                     style: TextStyle(
@@ -44,62 +46,69 @@ class CadreInfotmationNew extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
 
-                  // Mini-cadres (boutons)
-                  Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: [
-                      Column(
-                        children: [
-                          ContextnewButton(),
-                          const SizedBox(height: 10),
-                          PrincipeGenereauxnewButton(),
-                          const SizedBox(height: 10),
-                          DeclarationnewButton(),
-                        ],
-                      ),
-                      const SizedBox(width: 20),
-                      Column(
-                        children: [
-                          PerimtrenewButton(),
-                          const SizedBox(height: 10),
-                          ConformitenewButton(),
-                          const SizedBox(height: 10),
-                        ],
-                      ),
-                    ],
+                  // Cadre autour des mini-boutons
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: cadreColor.withOpacity(0.5),
+                      border: Border.all(color: cadreColor, width: 1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Wrap(
+                      spacing: 10,
+                      runSpacing: 10,
+                      children: [
+                        Column(
+                          children: [
+                            ContextnewButton(),
+                            const SizedBox(height: 10),
+                            PrincipeGenereauxnewButton(),
+                            const SizedBox(height: 10),
+                            DeclarationnewButton(),
+                          ],
+                        ),
+                        const SizedBox(width: 20),
+                        Column(
+                          children: [
+                            PerimtrenewButton(),
+                            const SizedBox(height: 10),
+                            ConformitenewButton(),
+                            const SizedBox(height: 10),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
 
-            // Ajout des mêmes conteneurs rouges que dans l'exemple précédent
+            // Bordures décoratives, positionnées de manière fixe
             Positioned(
-              top: 0, // Aligner en haut du cadre
-              left: 8, // Aligner à gauche du cadre
+              top: 0,
+              left: 8,
               child: Container(
-                width: 150, // Largeur de la bordure ajustable
-                height: 3, // Hauteur de la bordure ajustable
-                color:
-                    Color.fromARGB(255, 116, 150, 243), // Couleur de la bordure
+                width: 150,
+                height: 3,
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 5, // Aligner légèrement en dessous du premier conteneur
-              left: 4, // Aligner à gauche du cadre
+              top: 5,
+              left: 4,
               child: Container(
                 width: 149,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
-              top: 10, // Aligner encore plus bas
+              top: 10,
               left: 0,
               child: Container(
                 width: 148,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -108,7 +117,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 144,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -117,7 +126,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 140,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -126,7 +135,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 136,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -135,7 +144,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 132,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -144,7 +153,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 128,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
             Positioned(
@@ -153,7 +162,7 @@ class CadreInfotmationNew extends StatelessWidget {
               child: Container(
                 width: 124,
                 height: 3,
-                color: Color.fromARGB(255, 116, 150, 243),
+                color: cadreColor,
               ),
             ),
           ],

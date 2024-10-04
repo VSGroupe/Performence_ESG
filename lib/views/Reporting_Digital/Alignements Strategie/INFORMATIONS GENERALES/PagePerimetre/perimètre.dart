@@ -22,49 +22,50 @@ class _PerimtrenewButtonState extends State<PerimtrenewButton> {
           _isHovered = false;
         });
       },
-      child: Container(
-        // decoration: BoxDecoration(
-        //   boxShadow: [
-        //     // BoxShadow(
-        //     //   color: Colors.grey.withOpacity(0.5), // Couleur de l'ombre
-        //     //   spreadRadius: 2,
-        //     //   blurRadius: 7,
-        //     //   offset: Offset(0, 3), // Position de l'ombre (X, Y)
-        //     // ),
-        //   ],
-        // ),
-        child: ElevatedButton(
-          onPressed: () {
-            context.go(
-                '/Accueil_Reporting/Informations_generales/Perimetre_cycle_de_reporting_et_limites_methodologique');
-          },
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith<Color>(
-              (Set<MaterialState> states) {
-                if (_isHovered) {
-                  return Color.fromARGB(
-                      255, 48, 95, 46); // Couleur lorsque survolé
-                }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
-              },
-            ),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(8.0), // Réglez ici le rayon des bords
-              ),
+      child: ElevatedButton(
+        onPressed: () {
+          context.go(
+              '/Accueil_Reporting/Informations_generales/Perimetre_cycle_de_reporting_et_limites_methodologique');
+        },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+              if (_isHovered) {
+                return Color.fromARGB(255, 48, 95, 46); // Couleur survolée
+              }
+              return Colors.white; // Couleur par défaut
+            },
+          ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0), // Rayon des bords
             ),
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(2.0),
-            child: Text(
-              'Périmètre , cycle de reporting...',
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'Périmètre, cycle de reporting',
+                style: TextStyle(
+                  fontSize: 17,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
+              SizedBox(height: 4), // Espace entre les deux lignes
+              Text(
+                'et limites méthodologiques',
+                style: TextStyle(
+                  fontSize: 17,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),

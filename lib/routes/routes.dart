@@ -3,6 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:performence_esg/views/Espace_pilotage_Screen/espace_pilotage.dart';
 import 'package:performence_esg/views/Espace_pilotage_Screen/pages/Performances.dart';
 import 'package:performence_esg/views/Espace_pilotage_Screen/pages/Tableau_de_bord.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageBiodiversit%C3%A9/pageBiodiversit%C3%A9.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageClimat/pageClimat.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageEnergie/pageEnergie.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PagePollution/pagePolution.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageRessourceEaux/pageRessourceEaux.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageRessourcesEconomie/pageRessourceEconomie.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/GOUVERNANCE/PageBusiness/pagebusiness.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/GOUVERNANCE/PageConduite/pageConduite.dart';
 import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/GOUVERNANCE/PageMotDirecteur/pagemotDirigeant.dart';
@@ -61,16 +67,16 @@ class RouteClass {
       return const ErrorPage();
     },
     routes: [
+      // GoRoute(
+      //   path: '/',
+      //   pageBuilder: (context, state) => NoTransitionPage<void>(
+      //     key: state.pageKey,
+      //     restorationId: state.pageKey.value,
+      //     child: const HomeScreen(),
+      //   ),
+      // ),
       GoRoute(
         path: '/',
-        pageBuilder: (context, state) => NoTransitionPage<void>(
-          key: state.pageKey,
-          restorationId: state.pageKey.value,
-          child: const HomeScreen(),
-        ),
-      ),
-      GoRoute(
-        path: '/Accueil_Reporting',
         pageBuilder: (context, state) => NoTransitionPage<void>(
           key: state.pageKey,
           restorationId: state.pageKey.value,
@@ -432,59 +438,59 @@ class RouteClass {
         ),
       ),
       // //  ENVIRONNEMENT
-      // GoRoute(
-      //   path:
-      //       "/Accueil_Reporting/Environnement/Climat_(GES_Neutralite_carbone_Temperaure)(E1)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   path:
-      //       "/Accueil_Reporting/Environnement/Pollution:_Dechets_Impact_eau_sol_air_(E2)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   path:
-      //       "/Accueil_Reporting/Environnement/Ressources_eaux_et_maritimes_(E3)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   path: "/Accueil_Reporting/Environnement/Biodiversite_(E4)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   path:
-      //       "/Accueil_Reporting/Environnement/Ressources_et_economie_circulaire_(E5)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
-      // GoRoute(
-      //   path:
-      //       "/Accueil_Reporting/Environnement/Energie_(Consommation_et_type_carburant_flote_automobile_carbone_neutre_transition_energetique_energies_renouvelable)",
-      //   pageBuilder: (context, state) => NoTransitionPage<void>(
-      //     key: state.pageKey,
-      //     restorationId: state.pageKey.value,
-      //     child: const ConformitePage(),
-      //   ),
-      // ),
+      GoRoute(
+        path:
+            "/Accueil_Reporting/Environnement/Climat_(GES_Neutralite_carbone_Temperaure)(E1)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const ClimatPage(),
+        ),
+      ),
+      GoRoute(
+        path:
+            "/Accueil_Reporting/Environnement/Pollution_Dechets_Impact_eau_sol_air_(E2)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const PollutionPage(),
+        ),
+      ),
+      GoRoute(
+        path:
+            "/Accueil_Reporting/Environnement/Ressources_eaux_et_maritimes_(E3)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const RessourcesEauxPage(),
+        ),
+      ),
+      GoRoute(
+        path: "/Accueil_Reporting/Environnement/Biodiversite_(E4)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const BuiodiversitePage(),
+        ),
+      ),
+      GoRoute(
+        path:
+            "/Accueil_Reporting/Environnement/Ressources_et_economie_circulaire_(E5)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const RessourcesEconomiePage(),
+        ),
+      ),
+      GoRoute(
+        path:
+            "/Accueil_Reporting/Environnement/Energie_(Consommation_et_type_carburant_flote_automobile_carbone_neutre_transition_energetique_energies_renouvelable)",
+        pageBuilder: (context, state) => NoTransitionPage<void>(
+          key: state.pageKey,
+          restorationId: state.pageKey.value,
+          child: const EnergiePage(),
+        ),
+      ),
     ],
   );
 }

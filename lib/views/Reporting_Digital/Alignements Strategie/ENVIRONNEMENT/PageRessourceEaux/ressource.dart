@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
 class RessourceEauxnewButton extends StatefulWidget {
   @override
@@ -33,7 +35,10 @@ class _RessourceEauxnewButtonState extends State<RessourceEauxnewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go(
+                "/Accueil_Reporting/Environnement/Ressources_eaux_et_maritimes_(E3)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -41,7 +46,7 @@ class _RessourceEauxnewButtonState extends State<RessourceEauxnewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -53,13 +58,28 @@ class _RessourceEauxnewButtonState extends State<RessourceEauxnewButton> {
           ),
           child: const Padding(
             padding: EdgeInsets.all(2.0),
-            child: Text(
-              "       Ressources eaux (E3)...       ",
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '             Ressources eaux           ',
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4), // Espace entre les deux lignes
+                Text(
+                  "               et maritimes                ",
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

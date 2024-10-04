@@ -46,7 +46,7 @@ class _BusinessmodelnewButtonState extends State<BusinessmodelnewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -59,10 +59,10 @@ class _BusinessmodelnewButtonState extends State<BusinessmodelnewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "            Business Model...           ",
+              "            Business Model             ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),

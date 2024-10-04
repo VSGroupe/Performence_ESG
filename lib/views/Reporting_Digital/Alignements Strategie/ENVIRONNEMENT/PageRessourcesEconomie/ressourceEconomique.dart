@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
 class RessourceEconomienewButton extends StatefulWidget {
   @override
@@ -35,7 +37,10 @@ class _RessourceEconomienewButtonState
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go(
+                "/Accueil_Reporting/Environnement/Ressources_et_economie_circulaire_(E5)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -43,7 +48,7 @@ class _RessourceEconomienewButtonState
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -55,13 +60,28 @@ class _RessourceEconomienewButtonState
           ),
           child: const Padding(
             padding: EdgeInsets.all(2.0),
-            child: Text(
-              "Ressources et economie (E5)...",
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '               Ressources et            ',
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 4), // Espace entre les deux lignes
+                Text(
+                  "          économie circulaire (E5)  ",
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         ),

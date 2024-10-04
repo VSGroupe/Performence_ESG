@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
 class PollutionnewButton extends StatefulWidget {
   @override
@@ -33,7 +35,10 @@ class _PollutionnewButtonState extends State<PollutionnewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go(
+                "/Accueil_Reporting/Environnement/Pollution_Dechets_Impact_eau_sol_air_(E2)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -41,7 +46,7 @@ class _PollutionnewButtonState extends State<PollutionnewButton> {
                   return Color.fromARGB(
                       255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
+                return Colors.white; // Couleur par défaut
               },
             ),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -54,10 +59,10 @@ class _PollutionnewButtonState extends State<PollutionnewButton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "               Pollution (E2)...             ",
+              "               Pollution (E2)                ",
               style: TextStyle(
                 fontSize: 17,
-                color: Colors.white,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
