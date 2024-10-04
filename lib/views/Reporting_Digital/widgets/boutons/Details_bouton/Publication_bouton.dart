@@ -41,7 +41,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
                   return Color.fromARGB(
                       255, 236, 78, 78); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 14, 13, 114); // Couleur par défaut
+                return Color.fromARGB(255, 57, 54, 221); // Couleur par défaut
               },
             ),
           ),

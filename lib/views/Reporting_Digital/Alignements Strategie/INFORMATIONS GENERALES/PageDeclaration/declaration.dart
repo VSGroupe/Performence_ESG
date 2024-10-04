@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DeclarationnewButton extends StatefulWidget {
   @override
@@ -33,16 +34,25 @@ class _DeclarationnewButtonState extends State<DeclarationnewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go(
+                '/Accueil_Reporting/Informations_generales/Declaration_de_conformite_alignements_internationnaux_et_aux_secteurs_specifique_et_principales_exigence_(GRI_GPSNR_ODD)');
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
                 if (_isHovered) {
                   return Color.fromARGB(
-                      255, 236, 78, 78); // Couleur lorsque survolé
+                      255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 14, 13, 114); // Couleur par défaut
+                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
               },
+            ),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(8.0), // Réglez ici le rayon des bords
+              ),
             ),
           ),
           child: const Padding(

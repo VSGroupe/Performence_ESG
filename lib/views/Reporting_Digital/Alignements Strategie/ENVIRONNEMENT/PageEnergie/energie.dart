@@ -39,10 +39,16 @@ class _EnergienewButtonState extends State<EnergienewButton> {
               (Set<MaterialState> states) {
                 if (_isHovered) {
                   return Color.fromARGB(
-                      255, 236, 78, 78); // Couleur lorsque survolé
+                      255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 14, 13, 114); // Couleur par défaut
+                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
               },
+            ),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(8.0), // Réglez ici le rayon des bords
+              ),
             ),
           ),
           child: const Padding(

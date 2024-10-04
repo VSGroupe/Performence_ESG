@@ -6,7 +6,6 @@ import 'package:performence_esg/views/screen_login/widgets/custom_button.dart';
 import 'package:performence_esg/views/screen_login/widgets/custom_textfield.dart';
 import 'package:performence_esg/views/screen_login/widgets/global_constants.dart';
 import 'package:performence_esg/views/screen_login/widgets/height_space.dart';
-import 'package:performence_esg/views/sreen_pilotage/pilotage_page.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String route = "/login";
@@ -30,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           // Image en arrière-plan
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     "assets/images/shop2.jpg"), // Remplace par ton image
@@ -47,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 1200,
                       ),
                       Image.asset(
@@ -133,25 +132,64 @@ class _LoginScreenState extends State<LoginScreen> {
                                               fontStyle: FontStyle.italic,
                                             ),
                                           ),
-                                          const HeightSpace(10),
-                                          CustomTextField(
-                                            hintText: "Email",
-                                            controller: emailController,
-                                            hintTextStyle: const TextStyle(
+                                          const HeightSpace(50),
+                                          TextFormField(
+                                            style: const TextStyle(
                                                 color: Colors
-                                                    .white70), // Couleur du hint text
-                                            inputTextStyle: const TextStyle(
+                                                    .white), // Couleur du texte saisi
+                                            decoration: const InputDecoration(
+                                              prefixIcon: Icon(
+                                                Icons.email,
                                                 color: Colors
-                                                    .white), // Texte saisi en blanc
+                                                    .white, // Couleur de l'icône
+                                              ),
+                                              labelText: "Email",
+                                              labelStyle: TextStyle(
+                                                  color: Colors
+                                                      .white), // Couleur du label
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors
+                                                        .white), // Bordure normale
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width:
+                                                        2.0), // Bordure lorsque l'input est focus
+                                              ),
+                                            ),
                                           ),
-                                          CustomTextField(
-                                            hintText: "Mot de passe",
-                                            controller: passwordController,
-                                            hintTextStyle: const TextStyle(
-                                                color: Colors.white70),
-                                            inputTextStyle: const TextStyle(
-                                                color: Colors.white),
+                                          const HeightSpace(30),
+                                          TextFormField(
+                                            obscureText: true,
+                                            style: const TextStyle(
+                                                color: Colors
+                                                    .white), // Couleur du texte saisi
+                                            decoration: const InputDecoration(
+                                              prefixIcon: Icon(
+                                                Icons.lock,
+                                                color: Colors
+                                                    .white, // Couleur de l'icône
+                                              ),
+                                              labelText: "Mot de passe",
+                                              labelStyle: TextStyle(
+                                                  color: Colors
+                                                      .white), // Couleur du label
+                                              enabledBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors
+                                                        .white), // Bordure normale
+                                              ),
+                                              focusedBorder: OutlineInputBorder(
+                                                borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width:
+                                                        2.0), // Bordure lorsque l'input est focus
+                                              ),
+                                            ),
                                           ),
+                                          const HeightSpace(30),
                                           CustomButton(
                                             buttonText: "Se connecter",
                                             buttonTextColor: secondaryAppColor,

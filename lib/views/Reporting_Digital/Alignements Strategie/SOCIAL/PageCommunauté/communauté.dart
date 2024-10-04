@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CommunautenewButton extends StatefulWidget {
   @override
@@ -33,22 +34,30 @@ class _CommunautenewButtonState extends State<CommunautenewButton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go("/Accueil_Reporting/Social/Communautes_affectees_(S2)");
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
                 if (_isHovered) {
                   return Color.fromARGB(
-                      255, 236, 78, 78); // Couleur lorsque survolé
+                      255, 48, 95, 46); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 14, 13, 114); // Couleur par défaut
+                return Color.fromARGB(255, 85, 85, 88); // Couleur par défaut
               },
+            ),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(8.0), // Réglez ici le rayon des bords
+              ),
             ),
           ),
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              "Communauté affectées (S3)",
+              "  Communauté affectées (S3)  ",
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,
