@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/GOUVERNANCE/PageConduite/ligneMenuConduiteOK..dart';
 
 import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart';
 
@@ -116,6 +117,13 @@ class _ConduitePageState extends State<ConduitePage> {
                           height: 10,
                         ),
                         const SearchBarre(),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        BoutonGroupeConduite(),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         const SizedBox(
                           height: 10,
                         ),

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PublicationBouton extends StatefulWidget {
+class AlignemetInternationnauxBouton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _AlignemetInternationnauxBoutonState createState() =>
+      _AlignemetInternationnauxBoutonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _AlignemetInternationnauxBoutonState
+    extends State<AlignemetInternationnauxBouton> {
   bool _isHovered = false;
 
   @override
@@ -48,7 +50,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulications ',
+              'Alignement internationaux et aux secteurs spécifiques',
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,

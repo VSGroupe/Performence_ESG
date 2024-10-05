@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/INFORMATIONS%20GENERALES/PageDeclaration/ligneMenuDeclaration.dart';
+import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Ensemble_Bouton/Ensemble_bouton.dart';
 
 import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart';
 
@@ -121,6 +123,10 @@ class _DeclarationDeConformitePageState
                         const SizedBox(
                           height: 10,
                         ),
+                        BoutonGroupeConformite(),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Stack(
                           children: [
                             Image.asset('assets/images/salutation.png'),
@@ -130,7 +136,7 @@ class _DeclarationDeConformitePageState
                               bottom: 5,
                               child: Center(
                                 child: Text(
-                                  "GRI, GPSNR, ODD",
+                                  "Conformité",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,

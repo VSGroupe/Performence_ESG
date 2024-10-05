@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PublicationBouton extends StatefulWidget {
+class MarcheBouton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _MarcheBoutonState createState() => _MarcheBoutonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _MarcheBoutonState extends State<MarcheBouton> {
   bool _isHovered = false;
 
   @override
@@ -48,7 +48,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulications ',
+              "            Marché            ",
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,

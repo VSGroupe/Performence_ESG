@@ -7,6 +7,7 @@ import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/
 import 'package:performence_esg/views/Reporting_Digital/widgets/Login%20Reporting%20Edit/bouton_login_reporting.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/Text_actualit%C3%A91.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/actualit%C3%A9_element.dart';
+import 'package:performence_esg/views/Reporting_Digital/widgets/boutonLoginPilotage.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Details_bouton/Publication_bouton.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Ensemble_Bouton/Enseble_bouton2.dart';
 import 'package:performence_esg/views/Reporting_Digital/widgets/boutons/Ensemble_Bouton/Ensemble_bouton.dart';
@@ -59,8 +60,9 @@ class _HomeReportingPageState extends State<HomeReportingPage> {
             ),
           ),
           const SizedBox(
-            width: 350,
+            width: 220,
           ),
+          PilotageBouton(),
           const SizedBox(width: 30),
           SizedBox(child: PublicationBouton()),
           const SizedBox(

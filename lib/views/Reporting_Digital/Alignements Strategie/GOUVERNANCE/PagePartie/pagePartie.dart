@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/GOUVERNANCE/PagePartie/ligneMenuPartieOk..dart';
 
 import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart';
 
@@ -119,6 +120,10 @@ class _PartiePrenantePageState extends State<PartiePrenantePage> {
                         const SizedBox(
                           height: 10,
                         ),
+                        BoutonGroupePartie(),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Stack(
                           children: [
                             Image.asset('assets/images/salutation.png'),
@@ -128,7 +133,7 @@ class _PartiePrenantePageState extends State<PartiePrenantePage> {
                               bottom: 5,
                               child: Center(
                                 child: Text(
-                                  "Partie Prenates (liste, attentes, dialogue)",
+                                  "Partie Prenantes",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,

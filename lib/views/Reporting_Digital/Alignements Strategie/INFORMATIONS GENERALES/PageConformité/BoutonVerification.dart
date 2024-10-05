@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class PublicationBouton extends StatefulWidget {
+class VerificationTiersBouton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _VerificationTiersBoutonState createState() =>
+      _VerificationTiersBoutonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _VerificationTiersBoutonState extends State<VerificationTiersBouton> {
   bool _isHovered = false;
 
   @override
@@ -48,7 +49,7 @@ class _PublicationBoutonState extends State<PublicationBouton> {
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulications ',
+              "Vérification tiers independant",
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,

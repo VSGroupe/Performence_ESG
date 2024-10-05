@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/INFORMATIONS%20GENERALES/PageConformit%C3%A9/ligneMenuVerification.dart';
 
 import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart';
 
@@ -119,6 +120,10 @@ class _ConformitePageState extends State<ConformitePage> {
                         const SizedBox(
                           height: 10,
                         ),
+                        BoutonGroupeVerification(),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Stack(
                           children: [
                             Image.asset('assets/images/salutation.png'),
@@ -128,7 +133,7 @@ class _ConformitePageState extends State<ConformitePage> {
                               bottom: 5,
                               child: Center(
                                 child: Text(
-                                  "Conformité et Vérification",
+                                  "Vérification",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,

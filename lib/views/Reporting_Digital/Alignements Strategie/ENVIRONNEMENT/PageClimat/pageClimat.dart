@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:marquee_text/marquee_direction.dart';
 import 'package:marquee_text/marquee_text.dart';
+import 'package:performence_esg/views/Reporting_Digital/Alignements%20Strategie/ENVIRONNEMENT/PageClimat/ligneMenuClimat.dart';
 
 import 'package:performence_esg/views/Reporting_Digital/widgets/search_bar.dart';
 
@@ -116,6 +117,10 @@ class _ClimatPageState extends State<ClimatPage> {
                           height: 10,
                         ),
                         const SearchBarre(),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        BoutonGroupeClimat(),
                         const SizedBox(
                           height: 10,
                         ),

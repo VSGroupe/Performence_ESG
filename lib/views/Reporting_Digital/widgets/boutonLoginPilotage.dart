@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:performence_esg/routes/routes.dart';
 
-class PublicationBouton extends StatefulWidget {
+class PilotageBouton extends StatefulWidget {
   @override
-  _PublicationBoutonState createState() => _PublicationBoutonState();
+  _PilotageBoutonState createState() => _PilotageBoutonState();
 }
 
-class _PublicationBoutonState extends State<PublicationBouton> {
+class _PilotageBoutonState extends State<PilotageBouton> {
   bool _isHovered = false;
 
   @override
@@ -33,7 +35,9 @@ class _PublicationBoutonState extends State<PublicationBouton> {
         //   ],
         // ),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            context.go('/Connexion');
+          },
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.resolveWith<Color>(
               (Set<MaterialState> states) {
@@ -41,14 +45,14 @@ class _PublicationBoutonState extends State<PublicationBouton> {
                   return Color.fromARGB(
                       255, 236, 78, 78); // Couleur lorsque survolé
                 }
-                return Color.fromARGB(255, 57, 54, 221); // Couleur par défaut
+                return Color.fromARGB(255, 233, 217, 76); // Couleur par défaut
               },
             ),
           ),
           child: const Padding(
             padding: EdgeInsets.all(2.0),
             child: Text(
-              ' Pulications ',
+              '    Pilotage     ',
               style: TextStyle(
                 fontSize: 17,
                 color: Colors.white,
